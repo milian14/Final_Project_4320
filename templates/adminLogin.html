@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Admin Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='basic.css') }}">
+    </head>
+    <body>
+        <nav class="header1">
+            <u><a href="{{url_for('index')}}">Home</a></u>
+           <u><a href="{{(url_for('admin_login'))}}">Admin</a></u>
+           <u><a href="#">Reservation</a></u>
+            
+        </nav>
+        
+        <h1 class="header3">Administrator Login</h1>
+        <form id="loginform">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <br>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password">
+            <br>
+
+            <input type="button" value="login" onclick="validateLogin()">
+
+        </form>
+
+        <script src="{{ url_for('static', filename='login.js') }}" defer></script>
+    </body>
+</html>
